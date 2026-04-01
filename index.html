@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
+    <link href="./style.css" rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -54,7 +55,6 @@
       .delay-200 { transition-delay: 200ms; }
       .delay-300 { transition-delay: 300ms; }
     </style>
-    <link rel="stylesheet" crossorigin href="./assets/index-BWJhvTvP.css">
   </head>
   <body class="bg-brand-light min-h-screen font-sans text-brand-dark selection:bg-brand-pink selection:text-white">
 
@@ -64,19 +64,19 @@
         <div class="flex justify-between items-center">
           <!-- Logo -->
           <a href="#" class="flex items-center gap-3 group">
-            <div class="flex flex-col">
-              <span id="logo-text-1" class="font-serif text-2xl md:text-3xl tracking-wide transition-colors text-white">Veloura Nails</span>
-              <span id="logo-text-2" class="text-[10px] font-sans tracking-[0.2em] uppercase transition-colors text-white/80">by Shami</span>
-            </div>
+            <img src="https://drive.google.com/uc?export=view&id=1m6QrwYmByLoj_AJnqJ_vfNXwbncFKdlB" alt="Veloura Nails by Shami" class="h-12 md:h-16 w-auto object-contain" referrerpolicy="no-referrer" />
           </a>
           
           <!-- Desktop Menu -->
-          <div class="hidden lg:flex space-x-10 items-center">
-            <a href="#luxury" class="nav-link text-sm uppercase tracking-widest font-medium transition-colors hover:text-brand-pink text-white">Luxury Press-Ons</a>
+          <div class="hidden lg:flex space-x-8 items-center">
+            <a href="#offers" class="nav-link text-sm uppercase tracking-widest font-bold transition-colors text-brand-pink hover:text-white flex items-center gap-1"><i data-lucide="tag" class="w-4 h-4"></i> Offers</a>
+            <a href="#luxury" class="nav-link text-sm uppercase tracking-widest font-medium transition-colors hover:text-brand-pink text-white">Luxury</a>
             <a href="#statement" class="nav-link text-sm uppercase tracking-widest font-medium transition-colors hover:text-brand-pink text-white">Statement</a>
+            <a href="#reviews" class="nav-link text-sm uppercase tracking-widest font-medium transition-colors hover:text-brand-pink text-white">Reviews</a>
+            <a href="#faq" class="nav-link text-sm uppercase tracking-widest font-medium transition-colors hover:text-brand-pink text-white">FAQ</a>
             <a href="#videos" class="nav-link text-sm uppercase tracking-widest font-medium transition-colors hover:text-brand-pink text-white">Gallery</a>
-            <a href="#book" class="inline-flex items-center justify-center px-6 py-2.5 text-xs font-semibold text-white transition-all duration-300 bg-brand-dark rounded-full uppercase tracking-widest hover:bg-brand-pink">
-              Book Now
+            <a href="#book" class="inline-flex items-center justify-center px-6 py-2.5 text-xs font-bold text-white transition-all duration-300 bg-brand-pink rounded-full uppercase tracking-widest hover:bg-white hover:text-brand-dark shadow-[0_0_15px_rgba(242,166,182,0.5)]">
+              Order Now
             </a>
           </div>
 
@@ -93,10 +93,13 @@
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="lg:hidden bg-white border-t border-gray-100 absolute w-full overflow-hidden transition-all duration-300 max-h-0 opacity-0">
         <div class="px-4 py-6 space-y-4 flex flex-col">
+          <a href="#offers" class="mobile-link text-sm font-bold text-brand-pink uppercase tracking-widest flex items-center gap-2"><i data-lucide="tag" class="w-4 h-4"></i> Current Offers</a>
           <a href="#luxury" class="mobile-link text-sm font-medium text-brand-dark hover:text-brand-pink uppercase tracking-widest">Luxury Press-Ons</a>
           <a href="#statement" class="mobile-link text-sm font-medium text-brand-dark hover:text-brand-pink uppercase tracking-widest">Statement Collection</a>
+          <a href="#reviews" class="mobile-link text-sm font-medium text-brand-dark hover:text-brand-pink uppercase tracking-widest">Reviews</a>
+          <a href="#faq" class="mobile-link text-sm font-medium text-brand-dark hover:text-brand-pink uppercase tracking-widest">FAQ</a>
           <a href="#videos" class="mobile-link text-sm font-medium text-brand-dark hover:text-brand-pink uppercase tracking-widest">Watch Videos</a>
-          <a href="#book" class="mobile-link inline-block px-6 py-3 text-xs font-semibold text-white bg-brand-dark text-center rounded-full uppercase tracking-widest mt-4">Book Appointment</a>
+          <a href="#book" class="mobile-link inline-block px-6 py-3 text-xs font-bold text-white bg-brand-pink text-center rounded-full uppercase tracking-widest mt-4 shadow-md">Order Now</a>
         </div>
       </div>
     </nav>
@@ -104,16 +107,12 @@
     <!-- Hero -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden bg-brand-dark">
       <div class="absolute inset-0 z-0">
-        <video 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
-          class="w-full h-full object-cover opacity-70"
-          poster="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1920&q=80"
-        >
-          <source src="https://cdn.pixabay.com/video/2020/05/24/40049-424645328_large.mp4" type="video/mp4" />
-        </video>
+        <img 
+          src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=1920&h=1080" 
+          alt="Luxury Nail Art"
+          class="w-full h-full object-cover opacity-70 scale-105"
+          referrerpolicy="no-referrer"
+        />
         <div class="absolute inset-0 bg-black/30"></div>
       </div>
       
@@ -131,8 +130,11 @@
             Salon-perfect nails — ready in minutes, delivered to your door. Luxury made effortless.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="#book" class="w-full sm:w-auto px-8 py-3.5 text-xs font-semibold rounded-full text-brand-dark bg-white hover:bg-brand-pink hover:text-white transition-colors duration-300 uppercase tracking-widest">
-              Book Your Set
+            <a href="#offers" class="w-full sm:w-auto px-8 py-4 text-xs font-bold rounded-full text-white bg-brand-pink hover:bg-white hover:text-brand-dark transition-all duration-300 uppercase tracking-widest shadow-[0_0_20px_rgba(242,166,182,0.6)] hover:scale-105">
+              View Promotions
+            </a>
+            <a href="#book" class="w-full sm:w-auto px-8 py-4 text-xs font-bold rounded-full text-white border-2 border-white hover:bg-white hover:text-brand-dark transition-all duration-300 uppercase tracking-widest">
+              Order Custom Set
             </a>
           </div>
         </div>
@@ -163,6 +165,104 @@
       </div>
     </div>
 
+    <!-- Exclusive Offers -->
+    <section id="offers" class="py-20 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="fade-in-section text-center mb-16">
+          <span class="text-brand-pink font-bold tracking-widest uppercase text-sm mb-2 block">Limited Time Only</span>
+          <h2 class="text-4xl md:text-5xl font-serif text-brand-dark mb-4">Current Promotions</h2>
+          <p class="text-gray-500 font-light max-w-2xl mx-auto">Grab these exclusive deals before they're gone. High-quality press-ons at unbeatable prices.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Offer 1 -->
+          <div class="fade-in-section group bg-brand-light rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[4/5] overflow-hidden">
+              <img src="https://drive.google.com/uc?export=view&id=1oWEEY_3keyh7aFDt6HC6Vo9syU5pn4Zf" alt="Active Lifestyle Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerpolicy="no-referrer" />
+            </div>
+            <div class="p-6 flex flex-col flex-grow bg-[#1a0b12] text-white">
+              <h3 class="text-2xl font-serif text-[#e57ab3] mb-2">Nails That Move With You</h3>
+              <p class="text-sm text-gray-300 mb-4">Active Lifestyle Collection</p>
+              
+              <div class="bg-[#d966a6] text-white text-xs font-bold px-4 py-1.5 rounded-full inline-block mb-4 w-max">Our Services:</div>
+              
+              <p class="text-sm font-medium mb-4">Strong. Flexible. Built to last.</p>
+              
+              <ul class="space-y-2 mb-6 flex-grow text-sm">
+                <li class="flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4 text-[#e57ab3]"></i> Sweat & water resistant</li>
+                <li class="flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4 text-[#e57ab3]"></i> Strong hold</li>
+                <li class="flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4 text-[#e57ab3]"></i> Performance-ready shapes</li>
+              </ul>
+              
+              <a href="#book" class="w-full block text-center bg-[#d966a6] text-white py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-[#1a0b12] transition-colors shadow-md">DM Us For Booking</a>
+            </div>
+          </div>
+
+          <!-- Offer 2 -->
+          <div class="fade-in-section delay-100 group bg-brand-light rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[4/5] overflow-hidden">
+              <img src="https://drive.google.com/uc?export=view&id=1unLGuPj0cfFJ-a5yG-9m14qOt2xuR4cm" alt="The Statement Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerpolicy="no-referrer" />
+            </div>
+            <div class="p-6 flex flex-col flex-grow bg-white">
+              <h3 class="text-2xl font-serif text-brand-dark mb-1">The Statement Collection</h3>
+              <p class="text-lg font-serif italic text-gray-500 mb-6">One Set. Infinite Occasions</p>
+              
+              <div class="grid grid-cols-2 gap-4 mb-6 flex-grow">
+                <div>
+                  <h4 class="text-brand-pink font-bold text-sm mb-3">Our Styles:</h4>
+                  <ul class="space-y-2 text-sm text-brand-dark">
+                    <li class="flex items-center gap-2"><i data-lucide="check-square" class="w-4 h-4 text-brand-pink"></i> Dramatic shapes</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-square" class="w-4 h-4 text-brand-pink"></i> Luxe details</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-square" class="w-4 h-4 text-brand-pink"></i> Head-turning designs</li>
+                  </ul>
+                </div>
+                <div class="bg-brand-pink text-white rounded-xl p-3 flex flex-col justify-center text-center text-sm font-bold">
+                  Bold, artistic nails designed to stand out
+                  <div class="w-4 h-[1px] bg-white mx-auto my-2"></div>
+                  crystals, 3D art & highshine finishes.
+                </div>
+              </div>
+              
+              <div class="flex justify-between items-end mt-auto text-brand-pink text-sm font-medium">
+                <p class="max-w-[150px]">Treat yourself your hands and feet deserve it.</p>
+                <div class="text-right">
+                  <p class="flex items-center justify-end gap-1"><i data-lucide="phone" class="w-4 h-4"></i> +91 81220 15006</p>
+                  <p class="flex items-center justify-end gap-1"><i data-lucide="instagram" class="w-4 h-4"></i> veloura_nails_by_shami_786</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Offer 3 -->
+          <div class="fade-in-section delay-200 group bg-brand-light rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[4/5] overflow-hidden">
+              <img src="https://drive.google.com/uc?export=view&id=1SShy1eBztTh0uTVraY4JWtnF1dRVumcy" alt="The Bridal Edit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerpolicy="no-referrer" />
+            </div>
+            <div class="p-6 flex flex-col flex-grow bg-black text-white">
+              <h3 class="text-3xl font-serif text-white mb-4 tracking-widest uppercase text-center">The Bridal Edit</h3>
+              <p class="text-sm text-gray-300 mb-6 text-center">Delicate press-on nails crafted for the modern bride — lace details, pearl accents & soft champagne tones.</p>
+              
+              <p class="text-lg font-serif italic text-center mb-6">Made for your perfect moment.</p>
+              
+              <ul class="space-y-2 mb-8 flex-grow text-sm font-light text-gray-300">
+                <li>Handcrafted Designs</li>
+                <li>Long-lasting Wear</li>
+                <li>Luxury Keepsake Box</li>
+              </ul>
+              
+              <a href="#book" class="w-full block text-center bg-white text-black py-3 rounded-none text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors">DM Us For Booking</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href="#book" class="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all duration-300 bg-brand-dark rounded-full uppercase tracking-widest hover:bg-brand-pink hover:scale-105 shadow-xl">
+            View All Promotions <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Features -->
     <section id="luxury" class="py-24 md:py-32 relative overflow-hidden bg-brand-light">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,11 +270,10 @@
           <div class="fade-in-section order-2 lg:order-1 relative">
             <div class="aspect-[3/4] rounded-t-full overflow-hidden relative bg-brand-pink/10">
               <img 
-                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800&h=1000" 
                 alt="Luxury Nails" 
                 class="w-full h-full object-cover"
                 referrerpolicy="no-referrer"
-                onerror="this.src='https://images.unsplash.com/photo-1515347619152-c6bf3e125888?auto=format&fit=crop&w=800&q=80'"
               />
             </div>
             <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-pink/20 rounded-full blur-2xl"></div>
@@ -217,6 +316,15 @@
                 </div>
               </div>
             </div>
+            
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+              <a href="#book" class="inline-flex items-center justify-center px-8 py-4 text-xs font-bold text-white transition-all duration-300 bg-brand-dark rounded-full uppercase tracking-widest hover:bg-brand-pink hover:scale-105 shadow-lg">
+                Shop Luxury Collection <i data-lucide="shopping-bag" class="w-4 h-4 ml-2"></i>
+              </a>
+              <a href="#offers" class="inline-flex items-center justify-center px-8 py-4 text-xs font-bold text-brand-dark transition-all duration-300 bg-white border border-gray-200 rounded-full uppercase tracking-widest hover:border-brand-pink hover:text-brand-pink shadow-sm">
+                View Deals
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -253,19 +361,184 @@
                   <span class="text-base font-medium text-brand-dark">Head-turning designs</span>
                 </div>
               </div>
+
+              <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                <a href="#book" class="inline-flex items-center justify-center px-8 py-4 text-xs font-bold text-white transition-all duration-300 bg-brand-pink rounded-full uppercase tracking-widest hover:bg-brand-dark hover:scale-105 shadow-lg shadow-brand-pink/30">
+                  Shop Statement Pieces <i data-lucide="sparkles" class="w-4 h-4 ml-2"></i>
+                </a>
+              </div>
             </div>
           </div>
           
           <div class="fade-in-section relative">
             <div class="aspect-[4/5] overflow-hidden rounded-2xl relative group">
               <img 
-                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80" 
+                src="https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?auto=format&fit=crop&q=80&w=800&h=1000" 
                 alt="Statement Nails" 
                 class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerpolicy="no-referrer"
               />
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="py-24 md:py-32 bg-brand-light relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="fade-in-section text-center mb-16">
+          <span class="text-brand-pink font-bold tracking-widest uppercase text-sm mb-2 block">What Our Clients Say</span>
+          <h2 class="text-4xl md:text-5xl font-serif text-brand-dark mb-4">Happy Customers</h2>
+          <p class="text-gray-500 font-light max-w-2xl mx-auto">See what our satisfied clients are saying about their Veloura Nails experience.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Review 1 -->
+          <div class="fade-in-section group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col p-6">
+            <div class="flex items-center mb-4">
+              <div class="flex items-center gap-1">
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 font-light mb-6 flex-grow italic">"Absolutely stunning nails! The quality is amazing, and they lasted for weeks. The 'Statement Collection' was perfect for my event. Highly recommend!"</p>
+            <div class="flex items-center mt-auto">
+              <div class="w-10 h-10 rounded-full bg-brand-pink/20 flex items-center justify-center mr-3">
+                <span class="text-brand-pink font-bold text-sm">P</span>
+              </div>
+              <div>
+                <h4 class="text-sm font-semibold text-brand-dark">Priya Sharma</h4>
+                <p class="text-xs text-gray-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3 h-3 text-green-500"></i> Verified Buyer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="fade-in-section delay-100 group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col p-6">
+            <div class="flex items-center mb-4">
+              <div class="flex items-center gap-1">
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 font-light mb-6 flex-grow italic">"The 'Active Lifestyle' nails are a game-changer for me. They look so natural and are incredibly durable. Perfect for my busy schedule!"</p>
+            <div class="flex items-center mt-auto">
+              <div class="w-10 h-10 rounded-full bg-brand-pink/20 flex items-center justify-center mr-3">
+                <span class="text-brand-pink font-bold text-sm">A</span>
+              </div>
+              <div>
+                <h4 class="text-sm font-semibold text-brand-dark">Anjali Singh</h4>
+                <p class="text-xs text-gray-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3 h-3 text-green-500"></i> Verified Buyer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="fade-in-section delay-200 group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col p-6">
+            <div class="flex items-center mb-4">
+              <div class="flex items-center gap-1">
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+                <i data-lucide="star" class="w-5 h-5 text-brand-pink fill-brand-pink"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 font-light mb-6 flex-grow italic">"I got the 'Bridal Edit' set and they were absolutely perfect for my wedding day. So elegant and exactly what I wanted. The customer service was also top-notch!"</p>
+            <div class="flex items-center mt-auto">
+              <div class="w-10 h-10 rounded-full bg-brand-pink/20 flex items-center justify-center mr-3">
+                <span class="text-brand-pink font-bold text-sm">M</span>
+              </div>
+              <div>
+                <h4 class="text-sm font-semibold text-brand-dark">Meera Patel</h4>
+                <p class="text-xs text-gray-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3 h-3 text-green-500"></i> Verified Buyer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="#book" class="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all duration-300 bg-brand-dark rounded-full uppercase tracking-widest hover:bg-brand-pink hover:scale-105 shadow-xl">
+            Leave a Review <i data-lucide="square-pen" class="w-4 h-4 ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 md:py-32 bg-white relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="fade-in-section text-center mb-16">
+          <span class="text-brand-pink font-bold tracking-widest uppercase text-sm mb-2 block">Got Questions?</span>
+          <h2 class="text-4xl md:text-5xl font-serif text-brand-dark mb-4">Frequently Asked Questions</h2>
+          <p class="text-gray-500 font-light">Everything you need to know about our luxury press-on nails.</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="fade-in-section border border-gray-200 rounded-2xl overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center focus:outline-none transition-colors">
+              <span class="font-semibold text-brand-dark">How long do the press-on nails last?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-brand-pink transition-transform duration-300 faq-icon"></i>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+              <div class="px-6 pb-5 pt-2 text-gray-600 font-light">
+                With proper prep and application using our strong nail glue, your Veloura Nails can last up to 2-3 weeks. If you use sticky tabs for a temporary look, they will last 1-3 days.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="fade-in-section delay-100 border border-gray-200 rounded-2xl overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center focus:outline-none transition-colors">
+              <span class="font-semibold text-brand-dark">Are the nails reusable?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-brand-pink transition-transform duration-300 faq-icon"></i>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+              <div class="px-6 pb-5 pt-2 text-gray-600 font-light">
+                Yes! Our luxury press-ons are made with high-quality materials and are completely reusable. Simply buff away any dried glue from the back of the nail before reapplying.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="fade-in-section delay-200 border border-gray-200 rounded-2xl overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center focus:outline-none transition-colors">
+              <span class="font-semibold text-brand-dark">How do I know my size?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-brand-pink transition-transform duration-300 faq-icon"></i>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+              <div class="px-6 pb-5 pt-2 text-gray-600 font-light">
+                We offer sizing kits that you can order before purchasing a set to ensure a perfect fit. Alternatively, you can measure your nails at home using our sizing guide available on our Instagram page.
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 4 -->
+          <div class="fade-in-section delay-300 border border-gray-200 rounded-2xl overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center focus:outline-none transition-colors">
+              <span class="font-semibold text-brand-dark">Do you do custom designs?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-brand-pink transition-transform duration-300 faq-icon"></i>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+              <div class="px-6 pb-5 pt-2 text-gray-600 font-light">
+                Absolutely! We love bringing your visions to life. Select "Custom Design Request" in the booking form and provide details in the notes section. We will reach out to discuss your design.
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href="#book" class="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-brand-dark transition-all duration-300 bg-white border border-gray-200 rounded-full uppercase tracking-widest hover:border-brand-pink hover:text-brand-pink shadow-sm">
+            Still have questions? Contact Us
+          </a>
         </div>
       </div>
     </section>
@@ -407,10 +680,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center border-b border-white/10 pb-16">
           <div class="text-center md:text-left">
             <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
-              <div class="flex flex-col items-start">
-                <span class="font-serif text-3xl tracking-wide">Veloura Nails</span>
-                <span class="text-[10px] font-sans text-brand-pink tracking-[0.3em] uppercase mt-1">by Shami</span>
-              </div>
+              <img src="https://drive.google.com/uc?export=view&id=1m6QrwYmByLoj_AJnqJ_vfNXwbncFKdlB" alt="Veloura Nails by Shami" class="h-16 w-auto object-contain" referrerpolicy="no-referrer" />
             </div>
             <p class="text-gray-400 max-w-sm mx-auto md:mx-0 font-light text-sm">Luxury press-on nails and custom nail art, delivered directly to you.</p>
           </div>
@@ -447,8 +717,6 @@
 
       // Navbar scroll effect
       const navbar = document.getElementById('navbar');
-      const logoText1 = document.getElementById('logo-text-1');
-      const logoText2 = document.getElementById('logo-text-2');
       const navLinks = document.querySelectorAll('.nav-link');
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       
@@ -456,12 +724,6 @@
         if (window.scrollY > 50) {
           navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
           navbar.classList.remove('bg-transparent', 'py-6');
-          
-          logoText1.classList.add('text-brand-dark');
-          logoText1.classList.remove('text-white');
-          
-          logoText2.classList.add('text-brand-pink');
-          logoText2.classList.remove('text-white/80');
           
           navLinks.forEach(link => {
             link.classList.add('text-brand-dark');
@@ -473,12 +735,6 @@
         } else {
           navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
           navbar.classList.add('bg-transparent', 'py-6');
-          
-          logoText1.classList.remove('text-brand-dark');
-          logoText1.classList.add('text-white');
-          
-          logoText2.classList.remove('text-brand-pink');
-          logoText2.classList.add('text-white/80');
           
           navLinks.forEach(link => {
             link.classList.remove('text-brand-dark');
@@ -535,6 +791,33 @@
         bookingForm.reset();
         successMessage.classList.add('hidden');
         formContainer.classList.remove('hidden');
+      });
+
+      // FAQ Accordion Logic
+      const faqToggles = document.querySelectorAll('.faq-toggle');
+      
+      faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const content = toggle.nextElementSibling;
+          const icon = toggle.querySelector('.faq-icon');
+          
+          // Close all other FAQs
+          faqToggles.forEach(otherToggle => {
+            if (otherToggle !== toggle) {
+              otherToggle.nextElementSibling.style.maxHeight = null;
+              otherToggle.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+            }
+          });
+
+          // Toggle current FAQ
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            icon.style.transform = 'rotate(0deg)';
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.style.transform = 'rotate(180deg)';
+          }
+        });
       });
 
       // Intersection Observer for Fade In Animations
